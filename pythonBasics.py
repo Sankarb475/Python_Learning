@@ -14,4 +14,7 @@ Support libraries ==> self-explanatory
 
 Downside ==> a bit slower than other low level language like C or C++
 
+---a general-purpose language, Python’s roles are virtually unlimited: you can use it for everything from website development 
+and gaming to robotics and spacecraft control
+
 '''
