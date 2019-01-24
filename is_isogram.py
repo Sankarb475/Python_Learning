@@ -9,4 +9,4 @@ def is_isogram(a) :
     return False
 
 
-print(is_isogram("Puja"))
+print(is_isogram("PujaA"))
