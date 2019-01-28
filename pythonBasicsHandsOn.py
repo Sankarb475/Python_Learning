@@ -61,8 +61,29 @@ python script1.py > saveit.txt
 >>> re.split('[/:]', '/usr/home/lumberjack') 
 ['', 'usr', 'home', 'lumberjack']
 
+#List Operations
+>>> L = [123, 'spam', 1.23]
+>>> len(L)
+3
 
+>>> L*2
+[123, 'spam', 1.23, 123, 'spam', 1.23]
 
+>>> L[:]
+[123, 'spam', 1.23]
+
+>>> L[2:]
+[1.23]
+>>> L[:-1]
+[123, 'spam']
+
+>>> L.append(23)
+[123, 'spam', 1.23, 23]
+
+>>> L.pop(2)
+1.23
+>>> L
+[123, 'spam', 23]
 
 
 
