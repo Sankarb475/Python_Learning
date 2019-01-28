@@ -81,3 +81,14 @@ An attribute is simply a variable name that is attached to a specific object (li
 4. Expressions create and process objects.
 
 '''
+
+#the plus sign (+) means different things for different objects: addition for numbers, and concatenation for strings. 
+#This is a general property of Python that we’ll call polymorphism.
+
+
+
+
+
+
+
+
