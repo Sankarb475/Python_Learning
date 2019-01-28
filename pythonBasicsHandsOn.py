@@ -45,6 +45,22 @@ python script1.py > saveit.txt
  '__rshift__', '__rsub__', '__rtruediv__', '__rxor__', '__setattr__', '__sizeof__', '__str__', '__sub__', '__subclasshook__', '__truediv__', 
  '__trunc__', '__xor__', 'bit_length', 'conjugate', 'denominator', 'from_bytes', 'imag', 'numerator', 'real', 'to_bytes']
 
+# this will help you get a knowledge on the functionality of the function, dial 'q' to escape
+>>> help(a.__abs__)
+
+# Pattern Matching
+>>> match = re.match('Hello[ \t]*(.*)world', 'Hello Python world')
+>>> match
+<re.Match object; span=(0, 18), match='Hello Python world'>
+>>> match.group(1)
+'Python '
+
+>>> match = re.match('[/:](.*)[/:](.*)[/:](.*)', '/usr/home:lumberjack') 
+>>> match.groups()
+('usr', 'home', 'lumberjack')
+>>> re.split('[/:]', '/usr/home/lumberjack') 
+['', 'usr', 'home', 'lumberjack']
+
 
 
 
