@@ -67,6 +67,9 @@ reflected you got to restart the session or you can follow the below steps ::
 import script1
 from imp import reload
 reload(script1)
+
+a module is mostly just a package of variable names, known as a namespace, and the names within that package are called attributes. 
+An attribute is simply a variable name that is attached to a specific object (like a module)
 '''
 
 
