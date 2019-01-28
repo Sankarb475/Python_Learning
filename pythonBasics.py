@@ -50,3 +50,23 @@ route the resulting byte code to the Java Virtual Machine (JVM). Programmers sti
 files as usual; the Jython system essentially just replaces the rightmost two bubbles in Figure 2-2 with Java-based equivalents
 '''
 
+
+#Python Module
+'''
+every file of Python source code whose name ends in a .py extension is a module. Every file of Python source code whose name ends 
+in a .py extension is a module. Other files can access the items a module defines by importing that module —import operations 
+essentially load another file and grant access to that file’s contents.
+If you have imported one module,
+
+import script1
+
+now you made some changes over that module and you reimport it again just to make sure your recent changes are reflecting. 
+But it wouldnt do that, because imports are too expensive an operation to repeat more than once per file. So to have it 
+reflected you got to restart the session or you can follow the below steps ::
+
+import script1
+from imp import reload
+reload(script1)
+'''
+
+
