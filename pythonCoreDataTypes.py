@@ -20,4 +20,6 @@
 >>> random.choice([1, 2, 3, 4]) 
 1
 
+#numbers, strings, and tuples are immutable; lists, dictionaries, and sets are not
+
 
