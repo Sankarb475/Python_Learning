@@ -103,6 +103,9 @@ python script1.py > saveit.txt
 >>> M
 ['aa', 'bb', 'cc']
 
+>>> [row[1] for row in M if row[1] % 2 == 0]      #Filter out odd items
+[2, 8]
+
 
 
 
