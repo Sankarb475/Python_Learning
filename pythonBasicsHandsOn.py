@@ -94,7 +94,7 @@ python script1.py > saveit.txt
 >>> list2D = [[1,2,3],[4,5,6],[7,8,9]]
 >>> list2D[1][2]
 6
->>> col2 = [row[1] for row in list2D]
+>>> col2 = [row[1] for row in list2D]   #Give me row[1] (2nd element) for each row in matrix M, in a new list.
 >>> col2
 [2, 5, 8]
 >>> M
