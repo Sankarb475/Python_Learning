@@ -85,6 +85,24 @@ python script1.py > saveit.txt
 >>> L
 [123, 'spam', 23]
 
+>>> list = [1,23,4,56,33,656,564]
+>>> list.sort()
+>>> list
+[1, 4, 23, 33, 56, 564, 656]
+
+#selecting a partcular column from a 2D list
+>>> list2D = [[1,2,3],[4,5,6],[7,8,9]]
+>>> list2D[1][2]
+6
+>>> col2 = [row[1] for row in list2D]
+>>> col2
+[2, 5, 8]
+>>> M
+['bb', 'aa', 'cc']
+>>> M.sort()
+>>> M
+['aa', 'bb', 'cc']
+
 
 
 
