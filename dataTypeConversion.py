@@ -22,3 +22,9 @@
 >>> c = list(b)
 >>> c
 [1, 2]
+
+#String to Set
+>>> a = 'virtualization'
+>>> b = set(a)
+>>> b
+{'t', 'o', 'u', 'r', 'i', 'v', 'a', 'l', 'z', 'n'}
