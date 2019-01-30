@@ -176,5 +176,17 @@ they support the usual mathematical set operations
 >>> X
 {'a', 's', 'p', 'm'}
 
+#Set operations
+>>> X, Y
+({'a', 's', 'p', 'm'}, {'t', 'u', 'a', 's', 'p', 'l'})
+>>> X - Y
+{'m'}
+>>> Y - X
+{'t', 'l', 'u'}
+>>> X & Y
+{'a', 's', 'p'}
+>>> X | Y
+{'t', 'm', 'u', 'a', 's', 'p', 'l'}
+
 
 
