@@ -179,14 +179,42 @@ they support the usual mathematical set operations
 #Set operations
 >>> X, Y
 ({'a', 's', 'p', 'm'}, {'t', 'u', 'a', 's', 'p', 'l'})
->>> X - Y
+>>> X - Y                                                                    #difference
 {'m'}
->>> Y - X
+>>> Y - X                                                                    #difference
 {'t', 'l', 'u'}
->>> X & Y
+>>> X & Y                                                                    #Intersection
 {'a', 's', 'p'}
->>> X | Y
+>>> X | Y                                                                    #Union
 {'t', 'm', 'u', 'a', 's', 'p', 'l'}
 
+#checking superset
+>>> X > Y
+False
 
+>>> set('spam') == set('asmp')
+True
+>>> set('spam') - set('ham') 
+{'p', 's'}
+
+'''Decimal : fixed-precision floating-point numbers, and fraction numbers, which are rational numbers with 
+both a numerator and a denominator.
+'''
+>>> import decimal
+>>> a = (2/3) + (1/2)
+>>> a
+1.1666666666666665
+>>> d = decimal.Decimal(a)
+>>> d
+Decimal('1.166666666666666518636930049979127943515777587890625')
+
+#Fraction
+>>> from fractions import Fraction
+>>> f = Fraction(2, 3)
+>>> f
+Fraction(2, 3)
+>>> f + 1
+Fraction(5, 3)
+>>> f + Fraction(1,3)
+Fraction(1, 1)
 
