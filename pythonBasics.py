@@ -85,7 +85,19 @@ An attribute is simply a variable name that is attached to a specific object (li
 #the plus sign (+) means different things for different objects: addition for numbers, and concatenation for strings. 
 #This is a general property of Python that we’ll call polymorphism.
 
+'''
+1. Name four of Python’s core data types.
+2. Why are they called “core” data types?
+3. What is “polymorphism?
 
+1) => List, Tuple, Dictionary, String.
+2) => because they are effectively built into the Python language—that is, there is specific expression syntax for 
+      generating most of them.
+3) => plus sign (+) means different things for different objects: addition for numbers, and concatenation for strings. 
+This is a general property of Python that we’ll call polymorphism.
+'''
+# A “sequence” is a positionally ordered collection of objects. Strings,lists,andtuples are all sequences in Python. 
+#They share common sequence operations, such as indexing, concatenation, and slicing, but also have type-specific method calls
 
 
 
