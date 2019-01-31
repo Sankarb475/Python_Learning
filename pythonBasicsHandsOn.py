@@ -208,3 +208,41 @@ python script1.py > saveit.txt
 1
 #tuples provide a sort of integrity constraint
 
+
+#String slicing, so the last number is the gap of skipping, that is 1,3,5,... will be skipped
+>>> S = "I a m s a d"
+>>> S[::2]
+'Iamsad'
+
+#the third index if given negative will reverse the selection
+>>> S[::-2]
+'dasmaI'
+
+>>> S
+'I evol being alone'
+>>> S[5:1:-1]
+'love'
+>>> 
+>>> S[::-1]
+'enola gnieb love I'
+
+#converting whatever we have into string
+>>> repr(42)
+'42'
+
+#converting into ASCII 
+>>> ord('A')
+65
+
+#converting integer to binary
+>>> bin(13)
+'0b1101'
+
+#converting binary to integer
+>>> int('1101', 2)
+13
+
+
+
+
+
