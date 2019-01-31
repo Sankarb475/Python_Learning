@@ -90,6 +90,24 @@ python script1.py > saveit.txt
 >>> list
 [1, 4, 23, 33, 56, 564, 656]
 
+#adding multiple elements to an existing list
+>>> L
+[123, 'abc', 1.23, {}]
+>>> L.extend([5,6,7])
+>>> L
+[123, 'abc', 1.23, {}, 5, 6, 7]
+
+#deleting all the elements
+>>> L.clear()
+>>> L
+[]
+
+#deleting a single element by index
+>>> L = [123, 'abc', 1.23, {}]
+>>> del L[0]
+>>> L
+['abc', 1.23, {}]
+
 #selecting a partcular column from a 2D list
 >>> list2D = [[1,2,3],[4,5,6],[7,8,9]]
 >>> list2D[1][2]
