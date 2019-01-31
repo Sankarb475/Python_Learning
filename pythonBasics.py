@@ -101,6 +101,87 @@ This is a general property of Python that we’ll call polymorphism.
 
 
 
+'''
+The Dynamic Typing
+python dynamically assigns data type to varibales.
+>>> a = 3
+Python does these three things when the above statement is executed.
+1. Create an object to represent the value 
+2. Create the variable a, if it does not yet exist. 
+3. Link the variable a to the new object 3.
+
+Names        reference       object
+
+a             ====>           3
+
+
+
+Variable a becomes a reference to the object 3. Internally, the variable is really a pointer to the object’s memory space 
+created by running the literal expression 3.
+
+• Variables are entries in a system table, with spaces for links to objects.
+• Objects are pieces of allocated memory, with enough space to represent the values
+  for which they stand.
+• References are automatically followed pointers from variables to objects.
+
+objects have more structure than just enough space to represent their values. Each object also has two standard header fields: a type 
+designator used to mark the type of the object, and a reference counter used to determine when it’s OK to reclaim the object.
+
+types are associated with objects in Python, not with variables.
+
+>>> a = 3                                 # It's an integer
+>>> a = 'spam'                            # Now it's a string
+>>> a = 1.23                              # Now it's a floating point
+
+so 'a' is a variable and it has no data type, so when we assign it to 3, python creates an object with header as "integer" and
+value is 3, and creates a reference from variable name 'a' to object '3'. Then when we are assigning it to 'spam', pytohn again
+creates another object 'spam' with header as 'string' and references 'a' to 'spam' and so on.
+
+whenever a name is assigned to a new object, the space held by the prior object is reclaimed if it is not referenced by any 
+other name or object. This automatic reclamation of objects’ space is known as garbage collection. so the object space '3' gets
+reclaimed when 'a' started pointing to 'spam'.
+'''
+
+#Shared References
+>>> a = 3 
+>>> b = a
+
+#variable a and b both will be refering to the same object '3'
+
+>>> a = 'spam'
+
+#another object 'spam' will be created and a will be pointing to that and b will be pointing to '3' only
+
+>>> a = a+2 
+
+#another object '5' will be created and 'a' will be pointing to that
+
+
+'''
+in-place object chage, that is when we have an mutable data type like list, it doesnt always create different object all over.
+
+>>> l1 = [1,2,3]
+
+l1 is referring a collectinon of objects, each object can be pointed out using l1[index], so whenever one element/object is 
+getting changed of l1, we just need to create another object and place it in position.
+'''
+
+>>> l1 = [1,2,3]
+>>> l2 = l1
+>>> l2
+[1, 2, 3]
+>>> l1.append(4)
+>>> l1
+[1, 2, 3, 4]
+>>> l2
+[1, 2, 3, 4]
+
+# l2 gets changed as well,
+
+
+
+
+
 
 
 
