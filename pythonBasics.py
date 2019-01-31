@@ -178,6 +178,59 @@ getting changed of l1, we just need to create another object and place it in pos
 
 # l2 gets changed as well,
 
+>>> L1 = [2, 3, 4] 
+>>> L2 = L1[:]
+>>> L1[0] = 24
+>>> L1 [24, 3, 4] 
+>>> L2
+[2, 3, 4]
+
+#here L1 and L2 refers to two different pieces of memory
+
+#there is a way to check whether two variable are pointing to the same piece of memory.
+
+>>> L1 = [2, 3, 4] 
+>>> L2 = L1[:]
+>>> L2 == L1
+True
+>>> L2 is L1
+False
+
+# this means L2 and L1 are not pointing to the same memory but they are identical.
+# copying one object to another
+
+>>> import copy 
+>>> X = (1,2,3)
+>>> Y = copy.copy(X)
+>>> Y
+(1, 2, 3)
+>>> X is Y
+True
+
+'''you can always ask Python how many references there are to an object: the getrefcount function in the standard sys module 
+returns the object’s reference count.
+'''
+>>> import sys 
+>>> sys.getrefcount(L1)
+2
+>>> L3 = L1
+>>> sys.getrefcount(L1)
+3
+
+# so L1 has been used 3 times
+
+>>> a = 1
+>>> b = 1
+>>> c = 1
+>>> sys.getrefcount(1)
+208
+>>> d = 1
+>>> sys.getrefcount(1)
+209
+
+# 1 has been used 209 times 
+
+# dynamic typing is also the root of Python’s polymor- phism
 
 
 
