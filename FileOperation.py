@@ -75,6 +75,26 @@ is performed with the indicated buffer size. If negative, the buffer size is the
 # ab+ => Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
 
 
+>>> file1 = open('/Users/sankar.biswas/Desktop/hello.txt',"r",10)    # the file has to exist
+>>> type(file1)
+<class '_io.TextIOWrapper'>
+>>> file1.read()                                      #once this command has been executed, it will empty the variable 'file1'
+
+# file1 contains ==> 1,2,3,4,5,6,7,8,9,10
+>>> file1 = open('/Users/sankar.biswas/Desktop/hello 2.txt',"r",10)
+>>> a = list(file1.read().split(','))
+>>> a
+['1', '2', '3', '4', '5', '6', '7', '8', '9', '10']
+
+#if you try to write after opening it in 'r' mode.
+>>> file1.write('a')
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+io.UnsupportedOperation: not writable
+
+>>> file1.close()
+
+
 
 
 
