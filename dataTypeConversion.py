@@ -28,3 +28,10 @@
 >>> b = set(a)
 >>> b
 {'t', 'o', 'u', 'r', 'i', 'v', 'a', 'l', 'z', 'n'}
+
+
+#converting a list of string to a list of integers in python 3
+>>> a = ['1','2']
+>>> a = list(map(int,a))
+>>> a
+[1, 2]
