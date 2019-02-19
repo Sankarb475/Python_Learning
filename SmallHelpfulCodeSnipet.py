@@ -30,3 +30,33 @@
 >>> ast.literal_eval("{'muffin' : 'lolz', 'foo' : 'kitty'}")
 {'muffin': 'lolz', 'foo': 'kitty'}
 
+# Getting timestamp in python
+>>> import datetime
+
+>>> datetime.datetime.now()
+datetime.datetime(2019, 2, 19, 15, 55, 47, 368423)
+
+>>> str(datetime.datetime.now())
+'2019-02-19 15:55:53.691894'
+
+# substracting current time by 5 hours and get the timestamp
+
+>>> timesTamp = str(datetime.datetime.now() - datetime.timedelta(hours = 5))
+>>> timesTamp
+'2019-02-19 10:57:11.593920'
+
+# substracting current time by 15 minutes and get the timestamp
+>>> timesTamp = str(datetime.datetime.now() - datetime.timedelta(minutes = 15))
+>>> timesTamp
+'2019-02-19 15:43:08.448387'
+
+
+
+
+
+
+
+
+
+
+
