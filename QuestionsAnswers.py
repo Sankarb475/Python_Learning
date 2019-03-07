@@ -1,6 +1,6 @@
 1) Adding two dictionary in python :: use update method
 
---if you are using Python 2.x
+if you are using Python 2.x :: 
 
 >>> def merge_two_dicts(x, y):
 ...     z = x.copy()
@@ -20,7 +20,7 @@
 >>> a
 {'a': 1, 'b': 2, 'd': 1}
 
---in python 3.5 or greater
+--in python 3.5 or greater :: 
 
 >>> x = {'a':1, 'b': 2}
 >>> y = {'b':10, 'c': 11}
