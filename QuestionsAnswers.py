@@ -31,7 +31,7 @@ in python 3.5 or greater ::
 
 
 ==============================================================================================================================
-2) how to run a unix/linux command through a python script?
+2) how to run a unix/linux command through a python script
 
 ==> with the help of this package :: import subprocess
 
