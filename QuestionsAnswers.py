@@ -1,1 +1,1 @@
-// Adding two dictionary in python :: use update method
+' Adding two dictionary in python :: use update method
