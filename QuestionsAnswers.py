@@ -20,7 +20,7 @@ if you are using Python 2.x ::
 >>> a
 {'a': 1, 'b': 2, 'd': 1}
 
---in python 3.5 or greater :: 
+in python 3.5 or greater :: 
 
 >>> x = {'a':1, 'b': 2}
 >>> y = {'b':10, 'c': 11}
