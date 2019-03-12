@@ -56,7 +56,7 @@ lines = [line for line in output1 if line.strip()]
 out = lines[2:-1]
 
 ==============================================================================================================================
-3) How to retry a given number of times after exception?
+3) How to retry a given number of times after exception
 
 ==>
 tries = 3
@@ -70,7 +70,10 @@ for i in range(tries):
             raise
     break
 
-
+we can also use retry package to do it ::
+@retry(wait_random_min=1000, wait_random_max=2000)
+def wait_random_1_to_2_s():
+    print("Randomly wait 1 to 2 seconds between retries")
 
 
 
