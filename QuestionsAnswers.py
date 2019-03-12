@@ -55,7 +55,20 @@ output1 = output.split("\n")
 lines = [line for line in output1 if line.strip()]
 out = lines[2:-1]
 
+==============================================================================================================================
+3) How to retry a given number of times after exception?
 
+==>
+tries = 3
+for i in range(tries):
+    try:
+        do_the_thing()
+    except KeyError as e:
+        if i < tries - 1: # i is zero indexed
+            continue
+        else:
+            raise
+    break
 
 
 
