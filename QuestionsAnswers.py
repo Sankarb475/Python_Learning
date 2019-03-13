@@ -75,5 +75,41 @@ we can also use retry package to do it ::
 def wait_random_1_to_2_s():
     print("Randomly wait 1 to 2 seconds between retries")
 
+==============================================================================================================================
+4) How sleep works in Python
+
+==> you have to import the package "time".
+
+import time
+time.sleep(10) 
+==> here 10 is in seconds
+
+==============================================================================================================================
+5) what happens if method1 has try-except block but method2 which has been called inside method1 has no try-except block but
+the error is getting generated inside method2, will the method1 be able to catch the exception 
+
+==> the answer is yes
+
+def dummy1(a):
+    b = 100/a
+    return b
+
+def dummy2(a):
+   try:
+       out = dummy1(a)
+       print(out)
+   except Exception as e:
+       print(e)
+
+output = dummy2(0)
+
+division by zero
+Process finished with exit code 0
+
+
+
+
+
+
 
 
