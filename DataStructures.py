@@ -1,3 +1,16 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
 #List to String
 >>> a = ['l','i','f','e']
 >>> ''.join(a)
@@ -35,3 +48,26 @@
 >>> a = list(map(int,a))
 >>> a
 [1, 2]
+
+
+#Tuple to list
+>>> a = (1,2,3)
+>>> b = list(a)
+>>> b
+[1, 2, 3]
+
+
+#List to Tuple
+>>> b
+[1, 2, 3]
+>>> d = tuple(b)
+>>> d
+(1, 2, 3)
+
+
+
+
+
+
+
+
