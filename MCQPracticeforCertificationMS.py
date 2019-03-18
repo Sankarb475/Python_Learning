@@ -58,6 +58,33 @@ foo\nbar
 >>> eval("a+b")
 47
 
+==============================================================================================================================
+performing indexing and slicing operations ::
+
+==> Only List, Tuple and String can be sliced and indexed, also they support "+" operation.
+
+Dictionary, Set can not be sliced and indexed.
+
+
+        
+==============================================================================================================================        
+Python Operators Precedence ::
+** 
+~ + -  (uniary plus and minus)
+* / % //
+>> <<
+&
+^ |
+<= < > >= (comparison operators)
+<> == != (equality operators)
+= %= /= //= -= += *= **= (assignment operators)
+is is not (identity operators)
+
+
+
+
+
+
 
 
 
