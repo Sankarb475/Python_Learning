@@ -106,8 +106,45 @@ output = dummy2(0)
 division by zero
 Process finished with exit code 0
 
+==============================================================================================================================
+6) How to check whether a variable is an integer or not
 
+==> using isinstance(<var>, int)
 
+>>> gm = "Good Morning"
+>>> isinstance(gm, str)
+True
+
+>>> isinstance(a, int)
+True
+
+>>> isinstance(a, float)
+False
+
+==============================================================================================================================
+7) How to unzip "zip"er list
+
+==> zipped_list is a list of tuples where ith tuple consists of the ith element of all the lists that has been zipped.
+you can zip multiple lists.
+
+>>> a = [1,2,3,4,5]
+>>> b = [6,7,8,9,10]
+>>> c = [1,3,5,7,9]
+>>> zipper = zip(a,b,c)
+
+If the length of the iterables are not equal, zip creates the list of tuples of length equal to the smallest iterable.
+unzipping :: 
+>>> l1, l2, l3 = zip(*zipper)
+>>> l1
+(1, 2, 3, 4, 5)
+>>> l2
+(6, 7, 8, 9, 10)
+>>> l3
+(1, 3, 5, 7, 9)
+
+This zip object is an iterator. Iterators are lazily evaluated.
+Lazy evaluation, or call-by-need is an evaluation strategy which delays the evaluation of an expression until its value is 
+needed and which also avoids repeated evaluations.
 
 
 
