@@ -1,15 +1,83 @@
+Addition of data structures ::
+    
+#List
+>>> a = [1,2,3]
+>>> b = [4,5,6]
+>>> a + b
+[1, 2, 3, 4, 5, 6]
+
+#Set
+>>> a = {1,2,3}
+>>> b = {4,5,6}
+>>> a|b
+{1, 2, 3, 4, 5, 6}
+
+>>> a = {1,2,3}
+>>> b = {4,5,6}
+>>> a.update(b)
+>>> a
+{1, 2, 3, 4, 5, 6}
+
+>>> z = a.copy()
+>>> z.update(b)
+>>> z
+{1, 2, 3, 4, 5, 6}
+
+#Tuple
+>>> a = (1,2,3)
+>>> b = (4,5,6)
+>>> a + b
+(1, 2, 3, 4, 5, 6)
+
+#Dictionary
+after python 3
+>>> a = {1:2,2:3}
+>>> b = {3:4,4:5}
+>>> {**a,**b}
+{1: 2, 2: 3, 3: 4, 4: 5}
+
+or you can make use of copy and then update statement
+
+Subtraction of data structures ::
+
+#List
+>>> a = [1,2,3,4,5]
+>>> b = [3,4,5,6,7]
+>>> l3 = [x for x in a if x not in b]
+>>> l3
+[1, 2]
+
+>>> set(a) - set(b)
+{1, 2}
+
+If you just want to have the elements that are not common in both the list ::
+>>> c = set(a) - set(b)
+>>> d = (set(a) | set(b)) - c
+>>> d
+{3, 4, 5, 6, 7}
+
+#Set 
+>>> set(a) - set(b)
+{1, 2}
+
+#Tuple 
+>>> set(a) - set(b)
+{1, 2, 3}
+
+Comparing data structures ::
+>>> a
+{1: 2}
+>>> b
+{2: 3, 4: 5}
+>>> 
+>>> a == b
+False
+>>> b = {1:2}
+>>> a == b
+True
 
 
-
-
-
-
-
-
-
-
-
-
+Data type conversion ::
 
 #List to String
 >>> a = ['l','i','f','e']
