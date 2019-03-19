@@ -16,7 +16,17 @@ These functions are −
 #returns the evaluated result to you before python 3.0
 #after python 3.0 raw_input has been renamed to input()
 
+
+
 #File reading and writing 
+
+'''
+in Python, a file operation takes place in the following order.
+
+Open a file
+Read or write (perform operation)
+Close the file
+'''
 
 '''
 Before you can read or write a file, you have to open it using Python's built-in open() function. This function creates 
@@ -42,7 +52,8 @@ is performed with the indicated buffer size. If negative, the buffer size is the
 # r => Opens a file for reading only. The file pointer is placed at the beginning of the file. This is the default mode.
 
 
-# rb => Opens a file for reading only in binary format. The file pointer is placed at the beginning of the file. This is the default mode.
+# rb => Opens a file for reading only in binary format. The file pointer is placed at the beginning of the file. This is 
+#the default mode.
        
 
 # r+ => Opens a file for both reading and writing. The file pointer placed at the beginning of the file.
@@ -51,28 +62,36 @@ is performed with the indicated buffer size. If negative, the buffer size is the
 # rb+ => Opens a file for both reading and writing in binary format. The file pointer placed at the beginning of the file.
 
 
-# w => Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+# w => Opens a file for writing only. Overwrites the file if the file exists. If the file does not exist, creates a new file
+#for writing.
 
 
-# wb => Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exist, creates a new file for writing.
+# wb => Opens a file for writing only in binary format. Overwrites the file if the file exists. If the file does not exist, 
+#creates a new file for writing.
 
 
-# w+ => Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
+# w+ => Opens a file for both writing and reading. Overwrites the existing file if the file exists. If the file does not exist,
+#creates a new file for reading and writing.
 
 
-# wb+ => Opens a file for both writing and reading in binary format. Overwrites the existing file if the file exists. If the file does not exist, creates a new file for reading and writing.
-
-	
-# a => Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
-
-	
-# ab => Opens a file for appending in binary format. The file pointer is at the end of the file if the file exists. That is, the file is in the append mode. If the file does not exist, it creates a new file for writing.
+# wb+ => Opens a file for both writing and reading in binary format. Overwrites the existing file if the file exists. If the 
+#file does not exist, creates a new file for reading and writing.
 
 	
-# a+ => Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+# a => Opens a file for appending. The file pointer is at the end of the file if the file exists. That is, the file is in the 
+#append mode. If the file does not exist, it creates a new file for writing.
 
 	
-# ab+ => Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+# ab => Opens a file for appending in binary format. The file pointer is at the end of the file if the file exists. That is, 
+#the file is in the append mode. If the file does not exist, it creates a new file for writing.
+
+	
+# a+ => Opens a file for both appending and reading. The file pointer is at the end of the file if the file exists. The file
+#opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
+
+	
+# ab+ => Opens a file for both appending and reading in binary format. The file pointer is at the end of the file if the file 
+#exists. The file opens in the append mode. If the file does not exist, it creates a new file for reading and writing.
 
 
 >>> file1 = open('/Users/sankar.biswas/Desktop/hello.txt',"r",10)    # the file has to exist
