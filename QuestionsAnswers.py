@@ -146,7 +146,55 @@ This zip object is an iterator. Iterators are lazily evaluated.
 Lazy evaluation, or call-by-need is an evaluation strategy which delays the evaluation of an expression until its value is 
 needed and which also avoids repeated evaluations.
 
+==============================================================================================================================
+8) How to check whether a file exists without exception ::
+
+==> using import os.path
+
+# this is for a file
+>>> import os.path
+>>> os.path.isfile('/Users/saa')
+False
+
+# to check whether a directory exists or not 
+>>> os.path.isdir('/Users/sankar.biswas')
+True
+
+# to check whether it is a link or not 
+>>> os.path.islink('https://www.microsoft.com/en-us/learning/')
+False
+
+other utilities in os.path ==> os.path.isabs(    os.path.isdir(    os.path.isfile(   os.path.islink(   os.path.ismount(  
+  
+==============================================================================================================================
+9) how to check whether a file has any content or not
+                                                                                                    
+==> using os.stat
+                                                                                                    
+>>> os.stat("/Users/sankar.biswas/del/am.txt").st_size == 0
+True
+>>> os.stat("/Users/sankar.biswas/del/am2").st_size == 0
+False                                                                                                    
+  
+==============================================================================================================================
+                                                                                                    
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
 
 
 
 
+
+
+  
