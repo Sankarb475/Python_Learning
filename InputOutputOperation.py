@@ -114,14 +114,34 @@ io.UnsupportedOperation: not writable
 >>> file1.close()
 
 
+# Python Command line arguments
+==============================================================================================================================
+The Python sys module provides access to any command-line arguments via the sys.argv 
+
+This serves two purposes :: 
+sys.argv is the list of command-line arguments.
+len(sys.argv) is the number of command-line arguments.
+
+$ cat testing.py
+import sys
+
+print(sys.argv)
+print('Number of arguments:', len(sys.argv), 'arguments.')
+print('Argument List:', str(sys.argv))
+
+
+$ python testing.py 1 2 3 4 5 
+['testing.py', '1', '2', '3', '4', '5']
+Number of arguments: 6 arguments.
+Argument List: ['testing.py', '1', '2', '3', '4', '5']
+
+first argument is always script name and it is also being counted in number of arguments	
 
 
 
 
 
-
-
-
+==============================================================================================================================
 #writing something to a file
 
 >>> dataFile = open('/Users/sankar.biswas/Desktop/data.txt', 'w')
@@ -136,8 +156,5 @@ io.UnsupportedOperation: not writable
 I am in Love
 >>> data.split(' ')
 ['I', 'am', 'in', 'Love']
-
-
-
 
 
