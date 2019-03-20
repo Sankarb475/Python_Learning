@@ -177,11 +177,44 @@ True
 False                                                                                                    
   
 ==============================================================================================================================
-                                                                                                    
+10) Removing a file or directory through Python
+                                                                                  
+==> using import os
+                                                                                  
+os.remove() removes a file.
+
+os.rmdir() removes an empty directory.
+
+import shutil
+                                                                                  
+shutil.rmtree() deletes a directory and all its contents.
+
+pathlib.Path.unlink() removes the file or symbolic link.
+
+pathlib.Path.rmdir() removes the empty directory.  
   
-  
-  
-  
+==============================================================================================================================
+11) what is with keyword used for in python
+                                                               
+==> In python the with keyword is used when working with unmanaged resources (like file streams). It allows you to ensure that 
+a resource is "cleaned up" when the code that uses it finishes running. The with statement is a control-flow structure whose 
+basic structure is:
+                                                               
+with expression [as variable]:
+    with-block
+                                                               
+The expression is evaluated, and it should result in an object that supports the context management protocol (that is, 
+has __enter__() and __exit__() methods).
+                                                               
+>>> with open('/Users/sankar.biswas/Desktop/Test_Cases/input.txt') as f:
+...     data = f.read()
+...     print(data)      
+                                                               
+The advantage of using a with statement is that it is guaranteed to close the file no matter how the nested block exits.
+the with statement simplifies exception handling by encapsulating common preparation and cleanup tasks in so-called context 
+managers.      
+                                                               
+ 
   
   
   
