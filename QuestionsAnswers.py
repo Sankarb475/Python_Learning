@@ -122,7 +122,7 @@ True
 False
 
 ==============================================================================================================================
-7) How to unzip "zip"er list
+7) How to unzip "zip"ed list
 
 ==> zipped_list is a list of tuples where ith tuple consists of the ith element of all the lists that has been zipped.
 you can zip multiple lists.
@@ -194,7 +194,7 @@ pathlib.Path.unlink() removes the file or symbolic link.
 pathlib.Path.rmdir() removes the empty directory.  
   
 ==============================================================================================================================
-11) what is with keyword used for in python
+11) what is "with" keyword used for in python
                                                                
 ==> In python the with keyword is used when working with unmanaged resources (like file streams). It allows you to ensure that 
 a resource is "cleaned up" when the code that uses it finishes running. The with statement is a control-flow structure whose 
@@ -215,11 +215,34 @@ the with statement simplifies exception handling by encapsulating common prepara
 managers.      
                                                                
  
+==============================================================================================================================  
+12) how do you check existence of a variable in python?
+                                             
+==> If you are using python cli, every variable you have over there has scope both local and global.
+                                             
+>>> a = 23.33
+
+To check the existence of a local variable:                                             
+>>> if a in locals():
+...     print("exists")
+... 
+                                             
+>>> if "a" in locals():
+...     print("exists")
+... 
+exists 
+                                             
+                                             
+To check the existence of a global variable:
+
+>>> if "a" in globals():
+...     print("exists")
+... 
+exists
+
+so a exists both in local and global, also notice the variable name has to be inside a double quote.
   
-  
-  
-  
-  
+==============================================================================================================================  
   
   
   
