@@ -2,6 +2,22 @@
 The interactive prompt runs code and echoes results as you go, but it doesn’t save your code in a file
 '''
 
+# enumerate() in python ==> it will give you the index numbers while iterating
+
+>>> for n,i in enumerate(arr):
+...       print(n,i)
+...
+0 6
+1 4
+2 2
+3 1
+4 3
+5 5
+6 7
+>>> arr
+[6, 4, 2, 1, 3, 5, 7]
+
+
 #to get current working directory
 >>> import os
 >>> os.getcwd()
