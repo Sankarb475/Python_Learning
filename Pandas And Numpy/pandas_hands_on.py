@@ -216,3 +216,60 @@ Name: Name, dtype: object
 >>> a.Name.tolist()
 ['Puja', 'Sankar']
  
+-- deleting a column from a dataframe
+>>> del frame3['pop']
+>>> frame3
+    state  year
+0    Ohio  2000
+1    Ohio  2001
+2    Ohio  2002
+3  Nevada  2001
+4  Nevada  2002
+5  Nevada  2003
+
+>>> frame2 = pd.DataFrame(data, columns=['year', 'state', 'pop', 'debt'],index=['one', 'two', 'three', 'four','five', 'six'])
+>>> frame2
+       year   state  pop debt
+one    2000    Ohio  1.5  NaN
+two    2001    Ohio  1.7  NaN
+three  2002    Ohio  3.6  NaN
+four   2001  Nevada  2.4  NaN
+five   2002  Nevada  2.9  NaN
+six    2003  Nevada  3.2  NaN
+>>>
+
+-- .loc returns a series object containing rows of data (not columns)
+>>> frame2.loc['three']
+year     2002
+state    Ohio
+pop       3.6
+debt      NaN
+Name: three, dtype: object
+>>> type(frame2.loc['three'])
+<class 'pandas.core.series.Series'>
+
+>>> frame2.loc['three'].tolist()
+[2002, 'Ohio', 3.6, nan]
+
+-- if we convert a python dataframe to a python dictionary using dict()
+we will get a dictionary, the values of which will be series objects containing each column values and the keys will be the column 
+names.
+>>> dic = dict(frame)
+>>> dic
+{'state': 0      Ohio
+1      Ohio
+2      Ohio
+3    Nevada
+4    Nevada
+5    Nevada
+Name: state, dtype: object, 'year': 0    2000
+1    2001
+2    2002
+3    2001
+4    2002
+5    2003
+Name: year, dtype: int64}
+>>> dic.keys()
+dict_keys(['state', 'year'])
+
+*** loc and iloc => they enable you to select a subset of the rows and columns from a dataframe
