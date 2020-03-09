@@ -155,3 +155,13 @@ using "~" we can do not contains in python, example below::
            Genre
 1        romance
 2  fight, action
+
+-- another method 
+>>> d = b[b.Genre.str.contains('horror')==False]
+>>> d
+           Genre
+1        romance
+2  fight, action
+
+-- another syntax 
+df[df["col"].apply(lambda x:x not in [word1,word2,word3])]
