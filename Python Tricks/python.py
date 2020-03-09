@@ -93,4 +93,47 @@ It is just the same except you used () instead of []. BUT, you cannot perform fo
 only be used once: they calculate 0, then forget about it and calculate 1, and end calculating 4, one by one.
 
 ===================================================================================================================================
-5) 
+5) what does enumerate() do to an iterable?
+==>
+Enumerate() adds a counter to an iterable. So for each element in the iterable you get a tuple, the first element of that is the 
+sequential counter value, the other element is the value itself. For dictionary the second value of tuple will be just the key.
+
+>>> for item in enumerate(["a", "b", "c"]):
+...     print (item)
+...
+(0, 'a')
+(1, 'b')
+(2, 'c')
+
+>>> enumerate(b)
+<enumerate object at 0x00000280BFE69630>
+
+>>> a = [1,2,3]
+>>> a = [11,22,33]
+>>> for idx, val in enumerate(a):
+...       print(idx, val)
+...
+0 11
+1 22
+2 33
+
+data = {'a':1, 'b':2}
+for idx, d in enumerate(data):
+    print(idx, d)
+    
+0 a
+1 b
+
+data = {'a':1, 'b':2}
+for idx, d in enumerate(data):
+    print(idx, data[d])
+0 1
+1 2
+
+-- by default enumerate starts counting from 0, we can give any other value as well 
+>>> for item in enumerate(["a", "b", "c"], 100):
+...     print (item)
+...
+(100, 'a')
+(101, 'b')
+(102, 'c')
