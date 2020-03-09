@@ -137,3 +137,21 @@ for idx, d in enumerate(data):
 (100, 'a')
 (101, 'b')
 (102, 'c')
+
+=====================================================================================================================================
+6) how to do a string filter based on "not contains" the specific value?
+==>
+using "~" we can do not contains in python, example below::
+>>> a = ["horror, adv", "romance", "fight, action"]
+>>> b = pd.DataFrame(a, columns = ["Genre"])
+>>> b
+           Genre
+0    horror, adv
+1        romance
+2  fight, action
+>>>
+>>> c = b[ ~ b.Genre.str.contains('horror')]
+>>> c
+           Genre
+1        romance
+2  fight, action
