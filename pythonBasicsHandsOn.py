@@ -1,3 +1,42 @@
+# Python Decorators
+-- A design pattern to in python - takes in a function, adds some functionality and returns it.
+-- This is also called metaprogramming because a part of the program tries to modify another part of the program at compile time
+
+def make_pretty(func):
+    def inner():
+        print("I got decorated")
+        func()
+    return inner
+
+
+def ordinary():
+    print("I am ordinary")
+
+
+>>> ordinary()
+I am ordinary
+
+>>> # let's decorate this ordinary function
+>>> pretty = make_pretty(ordinary)
+>>> pretty()
+I got decorated
+I am ordinary
+  
+ 
+#Python Serialization
+===============================================
+Pickling is the process whereby a Python object hierarchy is converted into a byte stream (usually not human readable) to be written to a file, 
+this is also known as Serialization. Unpickling is the reverse operation, whereby a byte stream is converted back into a working Python object hierarchy.
+
+import pickle
+# serializes
+pickle.dump()
+
+#deserializes
+pickle.load()
+ 
+ 
+
 '''to run python in command prompt, use "python", (windows :considering you have set up environment variable)
 The interactive prompt runs code and echoes results as you go, but it doesn’t save your code in a file
 '''
