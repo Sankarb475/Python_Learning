@@ -1,3 +1,57 @@
+# Shallow Copy and Deep Copy
+
+# When you use "=" to create a copy of an object, It only creates a new variable that shares the reference of the original object.
+a = [1,2,3,4]
+b = a
+a.append(5)
+a[2] = 100
+print(a,b)
+
+=> [1, 2, 100, 4, 5] [1, 2, 100, 4, 5]
+
+
+-- Shallow copy creates a copy of t
+
+import copy
+a = [1,2,3,4]
+b = copy.copy(a)
+b.append(5)
+print(a,b)	
+-- [1, 2, 3, 4] [1, 2, 3, 4, 5]
+
+import copy
+a = [1,2,3,4]
+b = copy.copy(a)
+b[0] = 100
+print(a,b)
+
+-- [1, 2, 3, 4] [100, 2, 3, 4]
+
+
+import copy
+a = [[1],[2],[3],[4]]
+b = copy.copy(a)
+a.append(5)
+a[0][0] = 100
+print(a,b)
+-- [[100], [2], [3], [4], 5] [[100], [2], [3], [4]]
+
+
+-- Deep Copy
+it creates a completely new object with the elements of the existing object and they have no relation at all.
+
+import copy
+
+old_list = [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+new_list = copy.deepcopy(old_list)
+old_list[1][0] = 'BB'
+print("Old list:", old_list)
+print("New list:", new_list)
+
+Old list: [[1, 1, 1], ['BB', 2, 2], [3, 3, 3]]
+New list: [[1, 1, 1], [2, 2, 2], [3, 3, 3]]
+
+================================================================================
 # Python args and kargs
 The special syntax **kwargs in function definitions in python is used to pass a keyworded, variable-length argument list.
 
