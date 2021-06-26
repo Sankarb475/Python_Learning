@@ -1,3 +1,25 @@
+# Python args and kargs
+The special syntax **kwargs in function definitions in python is used to pass a keyworded, variable-length argument list.
+
+def myFun(**kwargs):
+    for key, value in kwargs.items():
+        print ("%s == %s" %(key, value))
+ 
+# Driver code
+myFun(first ='Geeks', mid ='for', last='Geeks') 
+
+
+-- The special syntax *args in function definitions in python is used to pass a variable number of arguments to a function
+You cant pass a key-worded parameter.
+
+def myFun(*argv):
+    for arg in argv:
+        print (arg)
+   
+myFun('Hello', 'Welcome', 'to', 'GeeksforGeeks')
+
+
+
 # Python Decorators
 -- A design pattern to in python - takes in a function, adds some functionality and returns it.
 -- This is also called metaprogramming because a part of the program tries to modify another part of the program at compile time
