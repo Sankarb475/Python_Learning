@@ -1,3 +1,30 @@
+How to make a class return a value when initializing it?
+=>
+Python constructor does not allow any return statment in its body.
+
+>>> class Foo:
+...     def __init__(self):
+...         return 42
+... 
+>>> foo = Foo()
+Traceback (most recent call last):
+  File "<stdin>", line 1, in <module>
+TypeError: __init__() should return None
+
+
+But there is one way to return when an object is created of a class using "__str__" method.
+
+class Car:
+    def __init__(self, speed, unit):
+        self.speed = speed
+        self.unit = unit
+
+    def __str__(self):
+        return str("Car with the maximum speed of {0} {1}".format(self.speed, self.unit))
+
+-- if we create an object of class Car, it will automatically call "__str__" method which will return a value.   
+
+===================================================================================================================================
 1) how to check whether a variable is of a certain type?
 =>
 isinstance() function can help us find it out.
